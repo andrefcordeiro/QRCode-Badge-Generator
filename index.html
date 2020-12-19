@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> QRCode Badge Generator </title>
+    <link rel="stylesheet" href="./styles.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.js"
+        integrity="sha512-6WOG76AXc8rlgtGYLGhDg7lIzZG2Cc+VrSamvgpeBYgxauGuoMua6uKll4OsZ0JvVSt12lRX/9uCmXzkt3/wfg=="
+        crossorigin="anonymous"></script>
+
+    <script scc="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <h1>
+            QRCode Badge Generator
+        </h1>
+
+        <div id="main">
+            <div id="fields">
+                <div id="fields-row">
+                    <div class="field">
+                        <h2> *Name: </h2>
+                        <input class="input" type="text">
+                    </div>
+                    <div class="field">
+                        <h2> *Email address: </h2>
+                        <input class="input" type="text">
+                    </div>
+                </div>
+
+                <div id="fields-row">
+                    <div class="field">
+                        <h2> twitter username: </h2>
+                        <input class="input" type="text" value="@">
+                    </div>
+                    <div class="field">
+                        <h2> Github username: </h2>
+                        <input class="input" type="text">
+                    </div>
+                </div>
+
+                <div id="buttons">
+                    <button id="button-qr" onclick="clearAllInputs()"> CLEAR </button>
+                    <button id="button-qr" onclick="generateQR()"> GENERATE QRCode BADGE</button>
+                </div>
+
+            </div>
+
+            <div id="qr-code"></div>
+
+            <button id="button-print" onclick="printDiv('qr-code')"> Print </button>
+
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

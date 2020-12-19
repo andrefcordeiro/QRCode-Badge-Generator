@@ -1,0 +1,131 @@
+*{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background-color: #400999ee;
+    overflow-x: hidden;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    font-size: 40px;
+    color: white;
+}
+
+h2{
+    color: white;
+    font-size: 20px;
+}
+
+#main{
+    display: flex;
+    justify-content: center;
+}
+
+#fields{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    justify-content: center;
+    background-color: #7c48d1ee;
+    margin-left: 50px;
+}
+
+#fields-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    padding-top: 10px;
+}
+
+@media (max-width: 900px) {
+    
+    #fields-row{
+        flex-direction: column;
+    }
+
+    body{
+        overflow-x: visible;
+    }
+
+    #main{
+        flex-direction: column;
+    }
+
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 20px;
+}
+
+.input{
+    margin-right: 20px;
+}
+
+
+#buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#button-qr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    width: 40%;
+    height: 60px;
+    align-self: center;
+    font-weight: bold;
+    color: white;
+    background-color: #400999ee;
+    border: none;
+}
+
+#button-qr:hover{
+    cursor: pointer;
+    color: #400999ee;
+    background-color: white;
+}
+
+#button-qr:focus, .input:focus{
+    outline: none !important;
+}
+
+#qr-code{
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+#button-print{
+    font-weight: bold;
+    color: #400999ee;
+    background-color: white;
+    border: none;
+    width: 100px;
+    height: 50px;
+    align-self: flex-end;
+    margin: 10px
+
+}
+
+#button-print:hover{
+    background-color: #400999ee;
+    color: white;
+    cursor: pointer;
+}
